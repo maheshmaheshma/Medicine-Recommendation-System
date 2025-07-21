@@ -1,5 +1,5 @@
-flask
-numpy
-pandas
-bleach
-textblob
+pip install flask
+pip install numpy
+pip install pandas
+pip install bleach
+pip install textblob
