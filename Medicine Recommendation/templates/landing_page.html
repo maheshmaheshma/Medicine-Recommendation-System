@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health Care Center - Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      h5{
+        color: black;
+      }
+      p{
+        color: black;
+      }
+      .logo {
+          width: 50px;
+          height: 50px;
+          color: black;
+          margin-top: 0;
+          margin-left: 2px;
+      }
+      body {
+          background-image: url('/static/bg.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          font-family: Arial, sans-serif;
+          margin-top: 60px; /* Adjust the margin to the height of your navbar */
+      }
+      .myimg {
+          width: 50px;
+          height: 50px;
+          border: 2px solid black;
+          border-radius: 25px;
+      }
+      .btn-lg:hover {
+          transform: translateY(10px);
+          background-color: #f8e8e8;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 10px yellowgreen;
+      }
+      .btn-lg:active {
+          transform: translateY(5px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 5px lavenderblush;
+      }
+      .intro-section {
+          background-color: rgba(255, 255, 255, 0.8);
+          padding: 40px;
+          border-radius: 15px;
+      }
+      .carousel-inner img {
+          height: 600px; /* Adjust height as needed */
+          width: 100%;
+          object-fit: cover;
+      }
+      nav.navbar {
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 1000;
+      }
+      .nav-item{
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
+      <div class="container-fluid">
+        <div class="logo">
+          <img class="myimg" src="{{ url_for('static', filename='img.png') }}" alt="">
+        </div>
+        <a class="navbar-brand" href="#">Health Care</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+
+            <!--<li class="nav-item">
+              <a class="nav-link" href="/signup" >Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login" >Log In</a>
+            </li>-->
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{ url_for('static', filename='c4.jpg') }}" class="d-block w-100" alt="Slide 1">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Welcome to Health Care Center</h5>
+            <p>Your one-stop solution for accurate health predictions and recommendations.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='c2.jpg') }}" class="d-block w-100" alt="Slide 2">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Expert Health Advice</h5>
+            <p>Receive reliable health recommendations from our advanced system.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='c3.jpg') }}" class="d-block w-100" alt="Slide 3">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Stay Healthy, Stay Informed</h5>
+            <p>Get the latest health tips and information to maintain a healthy lifestyle.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='c1.jpg') }}" class="d-block w-100" alt="Slide 4">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Personalized Health Plans</h5>
+            <p>Get customized health plans tailored to your needs.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='c5.jpg') }}" class="d-block w-100" alt="Slide 5">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>24/7 Support</h5>
+            <p>Access health support anytime, anywhere.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='c6.jpg') }}" class="d-block w-100" alt="Slide 6">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Track Your Progress</h5>
+            <p>Monitor your health progress with our advanced tools.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Intro Section -->
+    <div class="container mt-5">
+      <div class="intro-section text-center">
+        <h1 class="display-4">Welcome to Health Care Center</h1>
+        <p class="lead">Your one-stop solution for accurate health predictions and recommendations.</p>
+        <a href="/index" class="btn btn-lg btn-primary">Get Started</a>
+      </div>
+    </div>
+        <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 p-4 text-center">
+      <p style="color: white">&copy; 2025 Health Care Center. All rights reserved.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a class="text-white" href="/privacy-policy">Privacy Policy</a></li>
+        <li class="list-inline-item"><a class="text-white" href="/terms-of-service">Terms of Service</a></li>
+        <li class="list-inline-item"><a class="text-white" href="/contact">Contact Us</a></li>
+      </ul>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
